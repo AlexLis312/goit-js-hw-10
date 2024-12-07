@@ -1,7 +1,9 @@
 body {
   font-family: 'Arial', sans-serif;
+
   background-color: #f9f9f9;
   color: #333;
+
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -61,12 +63,48 @@ h4 {
   font-size: medium;
 }
 
+/* Select */
+.breed-select {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 15px;
+  font-size: 16px;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.breed-select::after {
+  content: '▼';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.breed-select option {
+  padding: 10px;
+  font-size: 16px;
+
+  background-color: #fff;
+  color: #333;
+  border: none;
+}
+
 /* Loader */
 
 .loader {
   width: 48px;
   height: 48px;
   border-radius: 50%;
+
   position: relative;
   animation: rotate 1s linear infinite;
 }
@@ -75,6 +113,7 @@ h4 {
   box-sizing: border-box;
   position: absolute;
   inset: 0px;
+
   border-radius: 50%;
   border: 5px solid #5a3091;
   animation: prixClipFix 2s linear infinite;
